@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+  --pad-x: clamp(1.25rem, 4vw, 4.5rem);
+  --header-pt: clamp(1.25rem, 2vh, 2rem);
+  --gap-nav: clamp(1.25rem, 2vw, 2.5rem);
+  --logo: clamp(1.4rem, 1.2vw + 0.95rem, 2.1rem);
+  --nav: clamp(0.78rem, 0.3vw + 0.72rem, 0.95rem);
+  --headline: clamp(2.6rem, 5vw + 0.8rem, 5.25rem);
+  --body: clamp(0.95rem, 0.35vw + 0.85rem, 1.125rem);
+  --micro: clamp(0.7rem, 0.2vw + 0.65rem, 0.825rem);
+  --btn-px: clamp(1.3rem, 1.5vw, 1.85rem);
+  --btn-py: clamp(0.75rem, 1vh, 1rem);
+  --feature-pad: clamp(1.25rem, 1.8vw, 2rem);
+  --feature-min: clamp(14rem, 20vw, 22rem);
+  --checker-w: clamp(3.25rem, 5vw, 6.5rem);
+  --checker-h: clamp(1.6rem, 2.5vw, 3.2rem);
+  --corner: clamp(0.75rem, 0.4vw + 0.5rem, 1.1rem);
+  --icon: clamp(1.1rem, 0.6vw + 0.8rem, 1.45rem);
+  --drawer-pad: clamp(1.5rem, 2.8vw, 2.5rem);
+  --drawer-max: clamp(20rem, 30vw, 30rem);
+  --main-py: clamp(2rem, 5vh, 4.5rem);
+}
+
+body {
+  font-family: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Subtle futuristic tech grid */
+.bg-tech-grid {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+}
+
+/* Futuristic Scanline for photo HUD */
+@keyframes hudScan {
+  0% {
+    top: -20%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    top: 120%;
+    opacity: 0;
+  }
+}
+
+.animate-hud-scan {
+  animation: hudScan 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Scroll reveal animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #71717a;
+}
