@@ -136,7 +136,7 @@ export function Contact() {
               Updated single-page technical resume summarizing DevOps projects, Kubernetes orchestration, and AI systems.
             </p>
             <a
-              href="/Ashish_Bhosle_Resume.pdf"
+              href={`${import.meta.env.BASE_URL}Ashish_Bhosle_Resume.pdf`}
               download="Ashish_Bhosle_Resume.pdf"
               className="inline-flex items-center gap-2 px-4 py-2.5 bg-black text-white text-xs font-semibold rounded hover:bg-gray-800 transition-colors"
             >

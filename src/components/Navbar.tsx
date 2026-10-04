@@ -82,7 +82,7 @@ export function Navbar() {
 
           {/* Resume Download CTA */}
           <a
-            href="/Ashish_Bhosle_Resume.pdf"
+            href={`${import.meta.env.BASE_URL}Ashish_Bhosle_Resume.pdf`}
             download="Ashish_Bhosle_Resume.pdf"
             className="px-3.5 py-2 border-2 border-black rounded-md text-xs font-bold tracking-wider hover:bg-black hover:text-white transition-all flex items-center gap-1.5 shadow-2xs"
           >
@@ -142,7 +142,7 @@ export function Navbar() {
             </div>
 
             <a
-              href="/Ashish_Bhosle_Resume.pdf"
+              href={`${import.meta.env.BASE_URL}Ashish_Bhosle_Resume.pdf`}
               download="Ashish_Bhosle_Resume.pdf"
               className="px-3 py-1.5 border border-black rounded text-xs font-semibold hover:bg-black hover:text-white transition-all flex items-center gap-1.5"
             >

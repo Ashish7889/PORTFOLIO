@@ -95,7 +95,7 @@ export function About() {
             <div className="border-2 border-black bg-white p-3.5 rounded-xl shadow-md">
               <div className="aspect-[4/5] rounded-lg overflow-hidden bg-gray-100 relative">
                 <img
-                  src="/photo.png"
+                  src={`${import.meta.env.BASE_URL}photo.png`}
                   alt="Ashish Bhosle"
                   className="w-full h-full object-cover object-[50%_15%]"
                 />

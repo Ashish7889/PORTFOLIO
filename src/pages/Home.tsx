@@ -72,7 +72,7 @@ export function Home() {
               </Link>
 
               <a
-                href="/Ashish_Bhosle_Resume.pdf"
+                href={`${import.meta.env.BASE_URL}Ashish_Bhosle_Resume.pdf`}
                 download="Ashish_Bhosle_Resume.pdf"
                 className="px-4 py-3.5 text-xs sm:text-sm font-mono text-gray-600 hover:text-black flex items-center gap-1.5 transition-colors"
               >
@@ -111,7 +111,7 @@ export function Home() {
                 {/* Photo with Scanning HUD Line */}
                 <div className="relative overflow-hidden rounded-lg aspect-[4/5] bg-gray-100">
                   <img
-                    src="/photo.png"
+                    src={`${import.meta.env.BASE_URL}photo.png`}
                     alt="Ashish Bhosle"
                     className="w-full h-full object-cover object-[50%_15%] filter grayscale contrast-[1.05] group-hover:grayscale-0 transition-all duration-500"
                   />

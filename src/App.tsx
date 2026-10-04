@@ -10,7 +10,7 @@ import { Contact } from "./pages/Contact";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <div className="min-h-screen bg-white text-black font-jakarta flex flex-col justify-between selection:bg-black selection:text-white">
         {/* Sticky Minimal Navbar */}
